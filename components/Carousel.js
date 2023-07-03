@@ -14,6 +14,7 @@ const TopCarousel = () => {
             showIndicators={false}
             showThumbs={false}
             interval={3000}
+            showArrows={false}
             >
                 <div>
                     <img src="/1.avif" />
@@ -22,7 +23,7 @@ const TopCarousel = () => {
                     <img src="/2.webp" />
                 </div>
                 <div>
-                    <img src="/3.jpg" />
+                    <img src="/b1.jpg" />
                 </div>
                 
             </Carousel>
