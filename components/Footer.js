@@ -51,14 +51,11 @@ const Footer = () => {
             <h2 className="title-font drop-shadow font-medium text-gray-900 tracking-widest text-sm mb-3">CONTACT US</h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">6635, Main Road, Khari Baoli,
-                  Delhi – 110006 (India).</a>
+                <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">Address: Plot no-1635, HSIIDC, INDUSTRIAL AREA, Rai, Haryana 131029</a>
               </li>
               <li>
-                <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">(+91) 8588808745</a>
-              </li>
-              <li>
-                <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">(+91) 9210488914</a>
+                <span>Phone : </span>
+                <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">(+91) 9971748626</a>
               </li>
               <li>
                 <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">info@poddarspices.com</a>
