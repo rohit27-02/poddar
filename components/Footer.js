@@ -20,13 +20,7 @@ const Footer = () => {
                 <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">FAQ&apos;S</a>
               </li>
               <li>
-                <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">CONTACT US</a>
-              </li>
-              <li>
-                <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">MY ACCOUNT</a>
-              </li>
-              <li>
-                <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">TRACK ORDER</a>
+                <a href='contact' className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">CONTACT US</a>
               </li>
             </nav>
           </div>
@@ -35,9 +29,6 @@ const Footer = () => {
             <nav className="list-none mb-10">
               <li>
                 <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">PRIVACY POLICY</a>
-              </li>
-              <li>
-                <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">RETURNS & REFUNDS</a>
               </li>
               <li>
                 <a className="cursor-pointer drop-shadow text-gray-600 hover:text-gray-800">TERMS & CONDITIONS</a>
