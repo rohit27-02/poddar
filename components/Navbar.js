@@ -40,7 +40,7 @@ const Navbar = () => {
                     <a  href='contact' className={page=="/contact"?"text-amber-800":"hover:text-amber-800"}>CONTACT</a>
                 </nav>
                 <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
-                    <img className={isScrolled?'h-[4rem] transition-all duration-1000':""} src='/logo.png' />
+                    <img className={isScrolled?'h-[4rem] transition-all duration-1000':"h-[7em]"} src='/logo.svg' />
                 </a>
                 <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
                     <form>

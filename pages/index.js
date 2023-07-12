@@ -126,7 +126,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h1 className="text-center font-bold text-4xl bg-gray-50 py-[4%]">Follow us on Instagram @poddarspices</h1>
+        <h1 className="text-center font-bold text-4xl bg-gray-50 py-[4%]">Follow us on Instagram @poddarpharmacy</h1>
       </div>
 
     </div>
