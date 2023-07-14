@@ -40,10 +40,10 @@ const Navbar = () => {
                     <a  href='contact' className={page=="/contact"?"text-amber-800":"hover:text-amber-800"}>CONTACT</a>
                 </nav>
                 <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
-                    <img className={isScrolled?'h-[4rem] transition-all duration-1000':"h-[7em]"} src='/logo.svg' />
+                    <img className={isScrolled?'h-[4rem] transition-all duration-700':"h-[7em] transition-all duration-700"} src='/logo.svg' />
                 </a>
                 <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-                    <form>
+                    <form >
                         <div class="relative">
                             <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500   " placeholder="Search Spices" required />
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">

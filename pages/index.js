@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { Carousel } from "react-responsive-carousel";
 import TopCarousel from "../components/Carousel";
 import Reviews from "../components/Reviews";
+import WhatsAppButton from "../components/Whatsapp";
 
 const products = [
   { img: "/1.jpg",img2:"/2.jpg", name: "Atom Harde"},
@@ -20,6 +20,7 @@ export default function Home() {
   return (
     <div>
       <TopCarousel />
+      <WhatsAppButton/>
 
       <div className="flex justify-center py-[2%] flex-col items-center">
         <h1 className="text-5xl font-bold">Our Products</h1>
@@ -44,7 +45,7 @@ export default function Home() {
           <div className="overflow-hidden w-[30%]">
             <div className="hover:scale-110 transition-all duration-500 cursor-pointer border-2 border-orange-400 relative ">
               <div className=" top-0  p-[5%]  font-medium ">
-                <h1 className="text-2xl text-orange-400 font-bold mb-[3%]">GROUND SPICES</h1>
+                {/* <h1 className="text-2xl text-orange-400 font-bold mb-[3%]">GROUND SPICES</h1> */}
                 <p>Our ground spices are freshly ground to ensure their sharp & flavour</p>
               </div>
               <img src="/spices.png" className=" object-cover" />
@@ -54,7 +55,7 @@ export default function Home() {
 
             <div className="hover:scale-110 transition-all duration-500 cursor-pointer border-2 border-amber-800 relative ">
               <div className=" top-0  p-[5%]  font-medium ">
-                <h1 className="text-2xl text-amber-800 font-bold mb-[3%]">BLENDED SPICES</h1>
+                {/* <h1 className="text-2xl text-amber-800 font-bold mb-[3%]">BLENDED SPICES</h1> */}
                 <p>Focus on delivering heat, pungency, sweetness & plenty of earthy flavor.</p>
               </div>
               <img src="/spices.png" className=" object-cover" />
@@ -64,7 +65,7 @@ export default function Home() {
 
             <div className="hover:scale-110 transition-all duration-500 cursor-pointer border-2 border-green-600 relative ">
               <div className=" top-0 p-[5%] font-medium ">
-                <h1 className="text-2xl text-green-600 font-bold mb-[3%]">SPECIAL SPICES</h1>
+                {/* <h1 className="text-2xl text-green-600 font-bold mb-[3%]">SPECIAL SPICES</h1> */}
                 <p>Spices that will lace your creations with the warmest of flavors.</p>
               </div>
               <img src="/spices.png" className=" object-cover" />
@@ -126,7 +127,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h1 className="text-center font-bold text-4xl bg-gray-50 py-[4%]">Follow us on Instagram @poddarpharmacy</h1>
+        <h1 className="text-center font-bold text-4xl bg-gray-50 py-[4%]">Follow us on Instagram <a className="hover:text-amber-800 transition-all duration-300" href="https://instagram.com/poddarchurans?igshid=NTc4MTIwNjQ2YQ==">@poddarpharmacy</a></h1>
       </div>
 
     </div>
