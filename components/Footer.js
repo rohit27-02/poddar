@@ -3,8 +3,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="text-gray-600 relative body-font">
-      <img className='absolute opacity-30 bottom-0 -z-50 h-[22rem] w-full object-cover' src='/footer-bg.jpg' alt='footer bg'/>
+    <footer className="text-gray-600 bg-gradient-to-b to-orange-100 from-white relative body-font">
+      {/* <img className='absolute opacity-30 bottom-0 -z-50 h-[22rem] w-full object-cover' src='/footer-bg.jpg' alt='footer bg'/> */}
       <div className="container px-5 py-16 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -47,12 +47,12 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="bg-orange-50 ">
+      <div>
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-500 text-sm text-center sm:text-left">© 2023 poddarspices 
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <a target='_blank' href='http://facebook.com/poddarayurvedicpharmacy' className="text-gray-500">
+            <a target='_blank' href='https://www.facebook.com/poddarayurvedicpharmacy' className="text-gray-500">
               <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
               </svg>
