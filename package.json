@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.14.2",
     "next": "13.4.7",
+    "next-sanity": "^5.1.2",
     "nodemailer": "^6.9.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-responsive-carousel": "^3.2.23",
-    "react-spinners": "^0.13.8"
+    "react-spinners": "^0.13.8",
+    "sanity": "^3.14.2",
+    "styled-components": "5.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

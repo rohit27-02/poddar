@@ -9,7 +9,6 @@ const Navbar = () => {
     const [page, setpage] = useState("home");
     const router = useRouter();
     useEffect(() => {
-        console.log(router.asPath)
         setpage(router.asPath)
         const handleScroll = () => {
             // Check if the page is scrolled
@@ -38,6 +37,7 @@ const Navbar = () => {
                     <a  href="Products" className={page=="/Products"?"text-amber-800":"hover:text-amber-800"}>SHOP NOW</a>
                     <a  href="about" className={page=="/about"?"text-amber-800":"hover:text-amber-800"}>ABOUT US</a>
                     <a  href='contact' className={page=="/contact"?"text-amber-800":"hover:text-amber-800"}>CONTACT</a>
+                    <a  href='Blog' className={page=="/Blog"?"text-amber-800":"hover:text-amber-800"}>BLOG</a>
                 </nav>
                 <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
                     <img className={isScrolled?'h-[4rem] transition-all duration-700':"h-[7em] transition-all duration-700"} src='/logo.png' />
@@ -45,12 +45,12 @@ const Navbar = () => {
                 
                 <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
                     <form >
-                        <div class="relative">
-                            <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500   " placeholder="Search Spices" required />
-                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <div className="relative">
+                            <input type="search" id="default-search" className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500   " placeholder="Search Spices" required />
+                            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" className="w-5 h-5 text-gray-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                             </div>
-                            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
+                            <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
                         </div>
                     </form>
                 </div>
