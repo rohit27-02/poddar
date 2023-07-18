@@ -21,16 +21,14 @@ export default function Home() {
     <div>
       <TopCarousel />
       <WhatsAppButton />
-
       <div className="flex justify-center py-[2%] flex-col items-center">
-        <h1 className="text-5xl font-bold">Our Products</h1>
+        <h1 className="md:text-5xl text-3xl font-bold">Our Products</h1>
         <div className="flex w-[85%] mx-auto gap-[2rem] justify-evenly py-[2%] flex-wrap">
           {
             products.map((product) => {
               return <div key={product.id} className="hover:drop-shadow  group  flex flex-col items-center cursor-pointer">
-                <div className="w-[15rem] overflow-hidden"><img className="group-hover:scale-110 transition-all duration-500" alt={product.name} src={product.img} /></div>
+                <div className="md:w-[15rem] w-[8rem] overflow-hidden"><img className="group-hover:scale-110 transition-all duration-500" alt={product.name} src={product.img} /></div>
                 <h1 className="drop-shadow font-semibold">{product.name}</h1>
-               
               </div>
             })
           }
@@ -41,9 +39,9 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center py-[2%] flex-col items-center">
-        <h1 className="text-5xl font-bold">Our Range of Spices</h1>
-        <div className="flex text-gray-600 justify-between px-[6%] gap-[2%] py-[4%]">
-          <div className="overflow-hidden w-[30%]">
+        <h1 className="md:text-5xl text-3xl font-bold">Our Range of Spices</h1>
+        <div className="flex md:flex-row flex-col text-gray-600 max-sm:items-center md:justify-between px-[6%] max-sm:space-y-[5%] gap-[2%] py-[4%]">
+          <div className="overflow-hidden w-[85%] md:w-[30%]">
             <div className="hover:scale-110 transition-all duration-500 cursor-pointer border-2 border-orange-400 relative ">
               <div className=" top-0  p-[5%]  font-medium ">
                 {/* <h1 className="text-2xl text-orange-400 font-bold mb-[3%]">GROUND SPICES</h1> */}
@@ -52,7 +50,7 @@ export default function Home() {
               <img src="/spices.png" className=" object-cover" />
             </div>
           </div>
-          <div className="w-[30%] overflow-hidden">
+          <div className="w-[85%] md:w-[30%] overflow-hidden">
 
             <div className="hover:scale-110 transition-all duration-500 cursor-pointer border-2 border-amber-800 relative ">
               <div className=" top-0  p-[5%]  font-medium ">
@@ -62,7 +60,7 @@ export default function Home() {
               <img src="/spices.png" className=" object-cover" />
             </div>
           </div>
-          <div className="w-[30%] overflow-hidden">
+          <div className="w-[85%] md:w-[30%] overflow-hidden">
 
             <div className="hover:scale-110 transition-all duration-500 cursor-pointer border-2 border-green-600 relative ">
               <div className=" top-0 p-[5%] font-medium ">
@@ -76,18 +74,18 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center text-gray-500 font-semibold bg-gray-50 py-[2%] px-[6%] flex-col items-center">
-        <h1 className="text-5xl text-gray-900 font-bold">Number&apos;s Speaks Itself</h1>
-        <div className="flex py-[4%] justify-center items-center">
+        <h1 className="md:text-5xl text-3xl text-gray-900 font-bold">Number&apos;s Speaks Itself</h1>
+        <div className="flex md:flex-row flex-col py-[4%] justify-center items-center">
           <div className="flex flex-col space-y-[10%]">
             <div className="flex items-center justify-center">
-              <div className="text-right w-2/3">
+              <div className="md:text-right w-2/3">
                 <h1 className="font-bold text-lg text-gray-700">#1 Best in Class</h1>
                 <p>Rated best in class products in range and category.</p>
               </div>
               <img width="20%" height="20%" src="https://img.icons8.com/ios/100/soup-plate.png" alt="soup-plate" className="ml-[10%]" />
             </div>
             <div className="flex items-center justify-center">
-              <div className="text-right w-2/3">
+              <div className="md:text-right w-2/3">
                 <h1 className="font-bold text-lg text-gray-700">12000+ Retail Network</h1>
                 <p>We have a strong retail network, covering almost every corner of India.</p>
               </div>
@@ -95,7 +93,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className=" mx-[5%] w-[70%] overflow-hidden">
+          <div className="max-sm:my-[10%] mx-[5%] md:w-[70%] overflow-hidden">
             <img src="/spice.jpg" />
           </div>
 
@@ -120,15 +118,15 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center bg-gray-50 py-[2%]  flex-col items-center">
-        <h1 className="text-5xl font-bold">What Our&apos; Customer&apos; say !</h1>
-        <p className="text-gray-600 font-semibold my-[2%]">We love collecting smiley&apos;s, here are some happy feedbacks !</p>
-        <div className="w-[80%] overflow-hidden mx-auto">
+        <h1 className="md:text-5xl text-3xl font-bold">What Our&apos; Customer&apos; say !</h1>
+        <p className="text-gray-600 font-semibold text-center w-[85%] my-[2%]">We love collecting smiley&apos;s, here are some happy feedbacks !</p>
+        <div className="w-[80%] max-sm:my-[5%] overflow-hidden mx-auto">
           <Reviews />
         </div>
       </div>
 
       <div>
-        <h1 className="text-center font-bold text-4xl bg-gray-50 py-[4%]">Follow us on Instagram <a className="hover:text-amber-800 transition-all duration-300" href="https://instagram.com/poddarchurans?igshid=NTc4MTIwNjQ2YQ==">@poddarpharmacy</a></h1>
+        <h1 className="text-center font-bold text-3xl md:text-5xl bg-gray-50 py-[4%]">Follow us on Instagram <a className="hover:text-amber-800 transition-all duration-300" href="https://instagram.com/poddarchurans?igshid=NTc4MTIwNjQ2YQ==">@poddarpharmacy</a></h1>
       </div>
 
     </div>

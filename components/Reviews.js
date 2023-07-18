@@ -20,13 +20,13 @@ const Reviews = () => {
         showThumbs={false}
         interval={3000}
         centerMode={true}
-        centerSlidePercentage={33.3}
+        centerSlidePercentage={40}
         autoFocus={true}
         showArrows={false}
 
       >
         {reviews.map((r) => {
-          return <div key={r.id} className=' h-[20rem] font-semibold mx-2 border-2 space-y-[2%] shadow-md'>
+          return <div key={r.id} className='h-[15rem] md:h-[20rem] font-semibold mx-2 border-2 space-y-[2%] shadow-md'>
             <div className=" my-[4%] bg-gray-200 w-[30%] rounded-full overflow-hidden mx-auto">
               <img width="188" height="188" src="https://img.icons8.com/3d-fluency/188/person-male--v3.png" alt="person-male--v3" />
             </div>

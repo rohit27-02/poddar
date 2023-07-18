@@ -8,9 +8,9 @@ const products = [
     { img: "/7.jpg", img2: "/8.jpg", name: "Anardana churan" },
     { img: "/9.jpg", img2: "/10.jpg", name: "Hing Goli" },
     { img: "/11.jpg", img2: "/12.jpg", name: "Arabpati Goli" },
-    { img: "/14.jpg", img2: "/13.jpg", name: "Rochak Munakka" },
     { img: "/15.jpg", img2: "/16.jpg", name: "Kabali Hing Goli" },
     { img: "/17.jpg", img2: "/18.jpg", name: "Podina Churan" },
+    { img: "/14.jpg", img2: "/13.jpg", name: "Rochak Munakka" },
 
 ]
 
@@ -20,8 +20,8 @@ const Products = () => {
 
     return (
         <div>
-            <div className='h-[18rem] bg-gradient-to-r  from-[#F3904F] to-[#3B4371] transition-all duration-300 relative object-scale-down overflow-hidden'>
-                <h1 className='text-white text-center w-full text-6xl font-bold absolute top-[7rem]  drop-shadow'>SHOP NOW</h1>
+            <div className='h-[12rem] md:h-[18rem] bg-gradient-to-r  from-[#F3904F] to-[#3B4371] transition-all duration-300 relative object-scale-down overflow-hidden'>
+                <h1 className='text-white text-center w-full text-4xl md:text-6xl font-bold absolute top-[5rem] md:top-[7rem]  drop-shadow'>SHOP NOW</h1>
 
             </div>
 
@@ -45,19 +45,19 @@ const Products = () => {
                
             </div> */}
 
-            <div className="flex mx-auto w-[80%] justify-center gap-[2rem]  py-[5%] flex-wrap">
+            <div className="flex mx-auto w-[85%] md:justify-center max-sm:items-center gap-3 mt-[5%] md:gap-[2rem]  py-[5%] flex-wrap">
                 {
                     products.map((product) => {
 
-                        return <div key={product.id} className="hover:drop-shadow p-6 rounded border group w-1/4 bg-gray-100 flex flex-col items-center">
-                            <div className="w-[12rem] rounded h-[12rem] my-4 overflow-hidden">
+                        return <div key={product.id} className="hover:drop-shadow p-6 rounded my-2 border group w-[48%] md:w-1/4 bg-gray-100 flex flex-col items-center">
+                            <div className="md:w-[12rem] w-36 h-36 rounded md:h-[12rem] my-4 overflow-hidden">
                                 <img onMouseEnter={() => sethover(product.name)} onMouseLeave={() => sethover()} className="group-hover:scale-110 transition-all duration-500" alt={product.name} src={hover == product.name ? product.img2 : product.img} />
                             </div>
                             <h1 className='font-semibold mb-4 text-gray-700'>{product.name}</h1>
-                            <div className='flex items-center justify-center'>
-                                <a href=''><img className='w-16 mr-4 pr-2 border-gray-700 mt-2 border-r-2' src='/a1.webp' alt='amazon shop button'/></a>
-                                <a href=''><img className='w-20 mr-4 pr-2 border-gray-700 border-r-2' src='/f1.png' alt='flipkart shop button'/></a>
-                                <a href='' className='h-7 rounded-md overflow-clip w-16'><img className='object-center -my-4' src='/meesho.jpg' alt='flipkart shop button'/></a>
+                            <div className='flex max-sm:flex-col max-sm:space-y-4 items-center justify-center'>
+                                <a href=''><img className='w-16 mr-4 md:pr-2 border-gray-700 mt-2 md:border-r-2' src='/a1.webp' alt='amazon shop button'/></a>
+                                <a href=''><img className='w-20 mr-4 md:pr-2 border-gray-700 md:border-r-2' src='/f1.png' alt='flipkart shop button'/></a>
+                                <a href='' className='h-7 rounded-md overflow-clip w-16'><img className='object-center -my-5 md:-my-4' src='/meesho.jpg' alt='flipkart shop button'/></a>
 
                             </div>
                         </div>

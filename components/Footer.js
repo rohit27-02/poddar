@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container px-5 py-16 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <img src='/logo.png' className='h-[15vh]' alt='logo' />
+            <img src='/logo.png' className='h-[10vh] md:h-[15vh]' alt='logo' />
           </a>
           <p className="mt-2 text-sm drop-shadow-sm text-gray-600">We create the perfect blends of aroma, freshness and flavour loved by millions of housewifes across the globe.</p>
         </div>
