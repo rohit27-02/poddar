@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const TopCarousel = () => {
         return (
-           <div className='h-[80vh]  overflow-hidden'>
+           <div className='h-[80%]  overflow-hidden'>
              <Carousel 
             autoPlay={true}
             infiniteLoop={true}
@@ -16,14 +16,14 @@ const TopCarousel = () => {
             interval={3000}
             showArrows={false}
             >
-                <div>
-                    <img src="/1.avif" />
+                <div >
+                    <img  src="/1.avif" />
                 </div>
-                <div>
-                    <img src="/2.webp" />
+                <div >
+                    <img  src="/2.webp" />
                 </div>
-                <div>
-                    <img src="/b1.jpg" />
+                <div >
+                    <img  src="/b1.jpg" />
                 </div>
                 
             </Carousel>
