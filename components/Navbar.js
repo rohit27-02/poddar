@@ -8,9 +8,13 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [page, setpage] = useState("home");
     const [ham, setham] = useState(false);
+    const [largeScreen, setlargeScreen] = useState(false);
     const router = useRouter();
     useEffect(() => {
         setpage(router.asPath)
+        if(typeof window !== 'undefined' && window.innerWidth > 700){
+            setlargeScreen(true)
+        }
         const handleScroll = () => {
             // Check if the page is scrolled
             if (window.pageYOffset > 0) {
@@ -32,7 +36,8 @@ const Navbar = () => {
 
     return (
         <header id="outer-container" className={nav}>
-            {typeof window !== 'undefined' && window.screen > 700 ? <div className="container mx-auto flex flex-wrap px-5 flex-col md:flex-row items-center">
+            { largeScreen ? 
+            <div className="container mx-auto flex flex-wrap px-5 flex-col md:flex-row items-center">
                 <nav className="flex lg:w-2/5 gap-5 font-semibold flex-wrap items-center text-base md:ml-auto">
                     <a href="/" className={page == "/" ? "text-amber-800" : "hover:text-amber-800"}>HOME</a>
                     <a href="Products" className={page == "/Products" ? "text-amber-800" : "hover:text-amber-800"}>SHOP NOW</a>
@@ -67,7 +72,7 @@ const Navbar = () => {
                         ham &&
                         <div className='fixed top-0 bg-amber-50 h-full left-0 w-[70%]'>
                             <div className='flex flex-col  my-28 gap-10 font-bold mx-10'>
-                            <img onClick={()=>setham(false)} className='absolute right-4 top-4 w-10' src="https://img.icons8.com/material-outlined/64/multiply--v1.png" alt="multiply--v1"/>
+                                <img onClick={() => setham(false)} className='absolute right-4 top-4 w-10' src="https://img.icons8.com/material-outlined/64/multiply--v1.png" alt="multiply--v1" />
                                 <a href="/" className={page == "/" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>HOME</a>
                                 <a href="Products" className={page == "/Products" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>SHOP NOW</a>
                                 <a href="about" className={page == "/about" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>ABOUT US</a>
