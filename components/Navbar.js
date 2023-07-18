@@ -57,7 +57,7 @@ const Navbar = () => {
                 </div>
             </div> :
                 <div className=" flex items-center justify-between px-6 ">
-                    <img onClick={() => setham(true)} className='h-10 w-14' src="https://img.icons8.com/ios/50/menu--v1.png" alt="menu--v1" />
+                    <img onClick={() => setham(true)} className='h-10 w-10' src="https://img.icons8.com/ios/50/menu--v1.png" alt="menu--v1" />
 
                     <a className=" mx-auto title-font font-medium items-center text-gray-900 ">
                         <img className={isScrolled ? 'h-[4rem] transition-all duration-700' : "h-[5em] transition-all duration-700"} src='/logo.png' />
@@ -66,13 +66,13 @@ const Navbar = () => {
                     {
                         ham &&
                         <div className='fixed top-0 bg-amber-50 h-full left-0 w-[70%]'>
-                            <div className='flex flex-col text-3xl my-28 gap-10 font-bold mx-10'>
-                            <img onClick={()=>setham(false)} className='absolute right-4 top-4 w-14' src="https://img.icons8.com/material-outlined/64/multiply--v1.png" alt="multiply--v1"/>
-                                <a href="/" className={page == "/" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-amber-800 pb-4 hover:text-amber-800"}>HOME</a>
-                                <a href="Products" className={page == "/Products" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-amber-800 pb-4 hover:text-amber-800"}>SHOP NOW</a>
-                                <a href="about" className={page == "/about" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-amber-800 pb-4 hover:text-amber-800"}>ABOUT US</a>
-                                <a href='contact' className={page == "/contact" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-amber-800 pb-4 hover:text-amber-800"}>CONTACT</a>
-                                <a href='Blog' className={page == "/Blog" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-amber-800 pb-4 hover:text-amber-800"}>BLOG</a>
+                            <div className='flex flex-col  my-28 gap-10 font-bold mx-10'>
+                            <img onClick={()=>setham(false)} className='absolute right-4 top-4 w-10' src="https://img.icons8.com/material-outlined/64/multiply--v1.png" alt="multiply--v1"/>
+                                <a href="/" className={page == "/" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>HOME</a>
+                                <a href="Products" className={page == "/Products" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>SHOP NOW</a>
+                                <a href="about" className={page == "/about" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>ABOUT US</a>
+                                <a href='contact' className={page == "/contact" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>CONTACT</a>
+                                <a href='Blog' className={page == "/Blog" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>BLOG</a>
                             </div>
 
                         </div>
