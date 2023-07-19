@@ -40,10 +40,10 @@ const Navbar = () => {
             <div className="container mx-auto flex flex-wrap px-5 flex-col md:flex-row items-center">
                 <nav className="flex lg:w-2/5 gap-5 font-semibold flex-wrap items-center text-base md:ml-auto">
                     <a href="/" className={page == "/" ? "text-amber-800" : "hover:text-amber-800"}>HOME</a>
-                    <a href="Products" className={page == "/Products" ? "text-amber-800" : "hover:text-amber-800"}>SHOP NOW</a>
-                    <a href="about" className={page == "/about" ? "text-amber-800" : "hover:text-amber-800"}>ABOUT US</a>
-                    <a href='contact' className={page == "/contact" ? "text-amber-800" : "hover:text-amber-800"}>CONTACT</a>
-                    <a href='Blog' className={page == "/Blog" ? "text-amber-800" : "hover:text-amber-800"}>BLOG</a>
+                    <a href="/Products" className={page == "/Products" ? "text-amber-800" : "hover:text-amber-800"}>SHOP NOW</a>
+                    <a href="/about" className={page == "/about" ? "text-amber-800" : "hover:text-amber-800"}>ABOUT US</a>
+                    <a href='/contact' className={page == "/contact" ? "text-amber-800" : "hover:text-amber-800"}>CONTACT</a>
+                    <a href='/Blog' className={page == "/Blog" ? "text-amber-800" : "hover:text-amber-800"}>BLOG</a>
                 </nav>
                 <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
                     <img className={isScrolled ? 'h-[4rem] transition-all duration-700' : "h-[7em] transition-all duration-700"} src='/logo.png' />
@@ -74,10 +74,10 @@ const Navbar = () => {
                             <div className='flex flex-col  my-28 gap-10 font-bold mx-10'>
                                 <img onClick={() => setham(false)} className='absolute right-4 top-4 w-10' src="https://img.icons8.com/material-outlined/64/multiply--v1.png" alt="multiply--v1" />
                                 <a href="/" className={page == "/" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>HOME</a>
-                                <a href="Products" className={page == "/Products" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>SHOP NOW</a>
-                                <a href="about" className={page == "/about" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>ABOUT US</a>
-                                <a href='contact' className={page == "/contact" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>CONTACT</a>
-                                <a href='Blog' className={page == "/Blog" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>BLOG</a>
+                                <a href="/Products" className={page == "/Products" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>SHOP NOW</a>
+                                <a href="/about" className={page == "/about" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>ABOUT US</a>
+                                <a href='/contact' className={page == "/contact" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>CONTACT</a>
+                                <a href='/Blog' className={page == "/Blog" ? "border-b-2 border-amber-800 pb-4 text-amber-800" : "border-b-2 border-black pb-4 hover:text-amber-800"}>BLOG</a>
                             </div>
 
                         </div>

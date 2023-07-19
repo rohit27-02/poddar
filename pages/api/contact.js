@@ -5,27 +5,28 @@ export default function handler(req, res) {
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      user: 'sam.rawatjee@gmail.com',
-      pass: 'dpnzexzuocloxetk',
+      user: 'poddarayurvedicpharmacy@gmail.com',
+      pass: 'ubfiavserjdszzjn',
     },
     secure: true,
   });
   const mailData = {
-    from: 'sam.rawatjee@gmail.com',
-    to: 'rohitrawatop@gmail.com',
+    from: 'poddarayurvedicpharmacy@gmail.com',
+    to: 'poddarayurvedicpharmacy@gmail.com',
     subject: `Enquiry From ${req.body.name}`,
     text: req.body.message + " | Sent from: " + req.body.email + "| Phone Number: " + req.body.phone,
     html: `<div>
-    <h3>Enquiry from Poddar spices</h3>
+    <h3>Enquiry from Poddarchurans.com</h3>
     <h3>${req.body.message}</h3>
     <h4>Thank You,</h4>
+    <h4>${req.body.name}</h4>
     <h4>${req.body.email}</h4>
     <h4>${req.body.phone}</h4>
     </div>`
   }
   const confirmmailData = {
-    from: 'sam.rawatjee@gmail.com',
-    to: `${req.body.email}`,
+    from: 'poddarayurvedicpharmacy@gmail.com',
+    to: req.body.email,
     subject: `Enquiry Sent Successfully`,
     text: req.body.message + " | Sent from: " + req.body.email + "| Phone Number: " + req.body.phone,
     html: `<table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -94,7 +95,7 @@ export default function handler(req, res) {
               <!-- start copy -->
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                  <p style="margin: 0;">Thank you,<br> info@urjaglobal.in</p>
+                  <p style="margin: 0;">Thank you,<br> poddarayurvedicpharmacy@gmail.com</p>
                 </td>
               </tr>
               <!-- end copy -->
