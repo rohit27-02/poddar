@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Banner from '../components/Banner'
 import { ClipLoader } from 'react-spinners';
+import 'animate.css';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2tldGNoYXJ0IiwiYSI6ImNsNW5maTh2ZzBlcmIzZXBmcnR2ZHpkYXUifQ.qIF3V5Kc2_6MBxb3nuR0lQ';
+mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
 const Contact = () => {
     const [name, setname] = useState("");
@@ -15,6 +16,7 @@ const Contact = () => {
     const [lng, setLng] = useState(77.10286068114056);
     const [lat, setLat] = useState(28.929460186452193);
     const [zoom, setZoom] = useState(16);
+    const [toast, settoast] = useState(false);
 
     useEffect(() => {
         if (map.current) return; // initialize map only once
@@ -27,7 +29,7 @@ const Contact = () => {
         // Create a new marker.
         const marker = new mapboxgl.Marker()
             .setLngLat([lng, lat])
-            .setPopup(new mapboxgl.Popup().setHTML("<h1>Poddar Ayurvedic Pharmacy, Plot no-1635, HSIIDC, INDUSTRIAL AREA, Rai, Sonipat, Haryana 131029</h1>")) 
+            .setPopup(new mapboxgl.Popup().setHTML("<h1>Poddar Ayurvedic Pharmacy, Plot no-1635, HSIIDC, INDUSTRIAL AREA, Rai, Sonipat, Haryana 131029</h1>"))
             .addTo(map.current);
     }, []);
 
@@ -42,6 +44,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        setsubmitted(true)
         let data = { name, email, phone, message }
         console.log('sending')
         fetch('/api/contact', {
@@ -55,7 +58,7 @@ const Contact = () => {
             console.log('Response received')
             if (res.status === 200) {
                 console.log('Response succeeded!')
-                setsubmitted(true)
+
                 setname('')
                 setemail('')
                 setphone('')
@@ -63,18 +66,23 @@ const Contact = () => {
             }
             setTimeout(() => {
                 setsubmitted(false)
+                settoast(true)
             }, 2000);
+            setTimeout(() => {
+                settoast(false)
+            }, 5000);
         })
     }
 
     return (
         <div>
+            {toast && <div className='fixed animate__animated animate__zoomIn md:top-32 top-20 font-medium z-50 bg-white text-2xl p-6 rounded-xl max-sm:mx-auto md:right-20 '>feedback sent successfully ! 😀</div>}
             <Banner title={"Contact Us"} />
             <section className="text-gray-600 body-font relative">
                 <div className="container px-5 py-10 md:py-24 mx-auto flex sm:flex-nowrap flex-wrap">
                     <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10  flex items-end justify-start relative">
-                        <div ref={mapContainer} className="h-full absolute w-full " ></div>
-                        <div className="bg-white w-5/6  mx-auto z-10 my-10 flex flex-wrap py-6 rounded shadow-md">
+                        <div ref={mapContainer} className="h-full max-sm:w-5/6 absolute w-full " ></div>
+                        <div className="bg-white w-5/6 max-sm:opacity-0  mx-auto z-10 my-10 flex flex-wrap py-6 rounded shadow-md">
                             <div className="lg:w-1/2 px-6">
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
                                 <p className="mt-1">Plot no-1635, HSIIDC, INDUSTRIAL AREA, Rai, Haryana 131029</p>

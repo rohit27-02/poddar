@@ -25,7 +25,7 @@ const Slug = () => {
     const slug = localStorage.getItem("slug")
     client.fetch(`*[_type == "post" && slug.current == $slug]{
       ${postFields}
-   }`, { slug }).then((data) => { console.log(data[0]); setpost(data[0]) })
+   }`, { slug }).then((data) => {setpost(data[0]) })
   }
   useEffect(() => {
     fetch();

@@ -6,7 +6,7 @@ export default function handler(req, res) {
     host: "smtp.gmail.com",
     auth: {
       user: 'poddarayurvedicpharmacy@gmail.com',
-      pass: 'ubfiavserjdszzjn',
+      pass: process.env.NEXT_PUBLIC_MAIL_PASS,
     },
     secure: true,
   });

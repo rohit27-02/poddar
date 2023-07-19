@@ -22,7 +22,7 @@ const Blog = () => {
     const [post, setpost] = useState();
 
     useEffect(() => {
-        client.fetch(feedQuery).then((data) => { console.log(data[0]); setposts(data);setpost(data[0]) })
+        client.fetch(feedQuery).then((data) => { setposts(data);setpost(data[0]) })
     }, []);
     return (
         <div>
