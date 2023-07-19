@@ -37,10 +37,10 @@ const Slug = () => {
   })
 
   const SampleImageComponent = ({ value, isInline }) => {
-    console.log(value.asset._ref)
     const { width, height } = getImageDimensions(value)
     return (
       <img
+      className='mx-auto'
         src={builder
           .image(value.asset._ref)
           .width(isInline ? 100 : 800)
@@ -63,9 +63,18 @@ const Slug = () => {
   const components = {
     types: {
       image: SampleImageComponent,
-      // Any other custom types you have in your content
-      // Examples: mapLocation, contactForm, code, featuredProjects, latestNews, etc.
     },
+    marks: {
+      link: ({children, value}) => {
+        const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined
+        return (
+          <a className='underline underline-offset-4 hover:text-amber-800 font-semibold' href={value.href} rel={rel}>
+            {children}
+          </a>
+        )
+      },
+    },
+    
   }
 
   return (
