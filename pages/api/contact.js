@@ -1,6 +1,7 @@
 let nodemailer = require('nodemailer')
 import "../../styles/confirmmail.css"
-export default function handler(req, res) {
+export default async function handler(req, res) {
+
   const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
@@ -10,6 +11,19 @@ export default function handler(req, res) {
     },
     secure: true,
   });
+
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+        if (error) {
+            console.log(error);
+            reject(error);
+        } else {
+            console.log("Server is ready to take our messages");
+            resolve(success);
+        }
+    });
+});
   const mailData = {
     from: 'poddarayurvedicpharmacy@gmail.com',
     to: 'poddarayurvedicpharmacy@gmail.com',
@@ -141,18 +155,28 @@ export default function handler(req, res) {
     
       </table>`
   }
-  transporter.sendMail(mailData, function (err, info) {
-    if (err)
-      console.log(err)
-    else
-      console.log(info)
+  await new Promise((resolve, reject)=>{
+    transporter.sendMail(mailData, function (err, info) {
+      if (err)
+       { console.log(err)
+        reject(err);}
+      else
+        {console.log(info)
+        resolve(info);}
+    })
   })
-  transporter.sendMail(confirmmailData, function (err, info) {
-    if (err)
-      console.log(err)
-    else
-      console.log(info)
+  await new Promise((resolve, reject)=>{
+    transporter.sendMail(confirmmailData, function (err, info) {
+      if (err)
+        {console.log(err)
+        reject(err);}
+      else
+        {console.log(info)
+        resolve(info);}
+    })
   })
+ 
+
 
   res.status(200).json({ success: true })
 }
