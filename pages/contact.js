@@ -64,13 +64,11 @@ const Contact = () => {
                 setphone('')
                 setmessage('')
             }
-            setTimeout(() => {
-                setsubmitted(false)
-                settoast(true)
-            }, 2000);
+            setsubmitted(false)
+            settoast(true)
             setTimeout(() => {
                 settoast(false)
-            }, 5000);
+            }, 2000);
         })
     }
 
@@ -95,11 +93,11 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    {submitted ? <div className='flex justify-center items-center w-full h-full mx-auto'>
+                    {submitted ? <div className='flex justify-center py-[16.85rem] w-full items-center lg:w-1/3 md:w-1/2 bg-white h-full'>
                         <ClipLoader
                             color="orange"
                             loading={submitted}
-                            size={150}
+                            size={80}
                             aria-label="Loading Spinner"
                             data-testid="loader"
                         /></div> :
